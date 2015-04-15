@@ -1,3 +1,5 @@
+package Client_Server_App;
+
 import java.io.Serializable;
 
 public class Message implements Serializable{
@@ -12,7 +14,4 @@ public class Message implements Serializable{
         return body;
     }
 
-    public void setBody(String body) {
-        this.body = body;
-    }
 }

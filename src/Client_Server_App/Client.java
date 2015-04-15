@@ -1,3 +1,5 @@
+package Client_Server_App;
+
 import java.io.*;
 import java.net.*;
 
@@ -18,7 +20,7 @@ public class Client {
             int serverSocket = 6788;
             DatagramPacket request = new DatagramPacket(byte_msg, byte_msg.length, host, serverSocket);
             socket.send(request);
-            System.out.println("Client: request sent");
+            System.out.println("Client_Server_App.Client: request sent");
 
             //Receive reply
             byte [] reply_buffer = new byte[100];
@@ -27,11 +29,11 @@ public class Client {
 
             //Process reply
             //Process request
-            System.out.println("Client: reply received");
+            System.out.println("Client_Server_App.Client: reply received");
             ByteArrayInputStream bais = new ByteArrayInputStream(reply.getData());
             ObjectInputStream ois = new ObjectInputStream(bais);
             Message reply_msg = (Message)(ois.readObject());
-            System.out.println("Client: reply message - " + reply_msg.getBody());
+            System.out.println("Client_Server_App.Client: reply message - " + reply_msg.getBody());
             socket.close();
 
         } catch (UnknownHostException e) {
