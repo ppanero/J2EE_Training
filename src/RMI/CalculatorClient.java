@@ -5,9 +5,6 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-/**
- * Created by Light on 15/04/15.
- */
 public class CalculatorClient {
 
     public static void main(String[] args){
