@@ -1,5 +1,6 @@
-import network.FDNode;
-import network.GameNode;
+package Ring_Failure_Detection;
+
+import Ring_Failure_Detection.network.FDNode;
 
 import java.util.Scanner;
 
