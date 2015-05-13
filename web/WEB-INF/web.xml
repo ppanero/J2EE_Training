@@ -9,11 +9,11 @@
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
     <servlet>
-        <servlet-name>Servlet_Example</servlet-name>
-        <servlet-class>Servlets.Servlet_Example</servlet-class>
+        <servlet-name>ServletExample</servlet-name>
+        <servlet-class>Servlets.ServletExample</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Servlet_Example</servlet-name>
-        <url-pattern>/example</url-pattern>
+        <servlet-name>ServletExample</servlet-name>
+        <url-pattern>/ServletWebxmlExamplePath</url-pattern>
     </servlet-mapping>
 </web-app>
