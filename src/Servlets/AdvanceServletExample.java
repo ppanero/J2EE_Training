@@ -84,6 +84,12 @@ public class AdvanceServletExample extends HttpServlet {
             userSessionName = "user name not given";
         }
 
+        //User context name check
+        String userContextName = (String)userContext.getAttribute("userName");
+        if(userContextName == null){
+            userContextName = "user name not given";
+        }
+
         PrintWriter writer = response.getWriter();
         writer.println("<!DOCTYPE html>\n" +
                         "<html>\n" +
@@ -94,7 +100,7 @@ public class AdvanceServletExample extends HttpServlet {
                         "<body>\n");
         writer.println("<div><h3>Hello " + userName + "! (request name)</h3></div>\n");
         writer.println("<div><h3>Hello " + userSessionName + "! (session name)</h3></div>\n");
-        writer.println("<div><h3>Hello " + (String)userContext.getAttribute("userName") + "! (context name)</h3></div>\n");
+        writer.println("<div><h3>Hello " + userContextName + "! (context name)</h3></div>\n");
         writer.println("<div><h3>Hello " + (String)this.getServletConfig().getInitParameter("defaultUserName") + "! " +
                         "(Default - Servlet initial configuration name)</h3></div>\n");
         writer.println("<div><p>You called through GET</p></div>\n" +

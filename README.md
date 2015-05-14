@@ -14,6 +14,7 @@ It contains:
 - web package:
 
     - A simple web app run on top of Tomcat 8.x server.
+    - A JSP example with function declaration, and both static and dynamic content.
 
 NOTE: I know that the code provided in these examples is not efficient.
 They are merely examples to train yourself and understand J2EE.
